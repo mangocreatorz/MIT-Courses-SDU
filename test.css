@@ -1,7 +1,7 @@
 .outer {
   
-  width: 850px;
-  margin: auto;
+  width: 450px;
+  margin: 10px;
   display: block;
   
 
@@ -26,7 +26,7 @@
   background-color: white;
   mix-blend-mode: screen;
   padding: 5px;
-  width: 850px;
+  width: 450px;
 }
 
 h1 {
