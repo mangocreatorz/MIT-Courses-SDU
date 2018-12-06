@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="/assets/master.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' rel="stylesheet">
+ <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+  <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+  <div id="app">
+    <v-app light>
+      <template>
+
+
+        <!--header-->
+        <v-toolbar color="blue-grey darken-4">
+
+          <a href="/" style="text-decoration:none"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MIT_logo.svg/1280px-MIT_logo.svg.png" alt="MIT logo" height="30"></a>
+          <a href="/" style="text-decoration: none;"><h1 style="color: #fff; font-weight: 400; font-size: 30px; margin-left: 10px;">Courses</h1></a>
+          <v-spacer></v-spacer>
+          <v-toolbar-items class="hidden-sm-and-down">
+            <v-btn flat style="color: #fff;" id="test" >MAIN</v-btn>
+            <v-btn flat style="color: #fff;" >COURSES</v-btn>
+            <v-btn style="color: #fff;" flat >TEACHERS</v-btn>
+
+          </v-toolbar-items>
+        </v-toolbar>
+
+
+
+
+        <v-jumbotron
+        :gradient="gradient"
+   dark
+   src="https://www.vactualpapers.com/web/wallpapers/material-design-hd-wallpaper-no-0431/thumbnail/lg.png">
+    <v-container fill-height>
+      <v-layout align-center>
+        <v-flex>
+          <h3 class="display-3">Welcome to MIT Courses register page</h3>
+
+          <span class="subheading">Lorem ipsum dolor sit amet, pri veniam forensibus id. Vis maluisset molestiae id, ad semper lobortis cum. At impetus detraxit incorrupte usu, repudiare assueverit ex eum, ne nam essent vocent admodum.</span>
+
+          <v-divider class="my-3"></v-divider>
+
+          <div class="title mb-3">Check out our newest features!</div>
+
+
+        </v-flex>
+      </v-layout>
+    </v-container>
+  </v-jumbotron>
+
+
+
+
+
+
+
+        <!--end of header-->
+
+
+        <!--courses line-->
+
+        <v-container style="width: 50%;">
+
+          <v-form v-model="valid" ref="form" method="post">
+              <h3>You are registering to <%= courseName%> course</h3>
+
+      <v-text-field
+        name="name"
+        label="Name"
+        v-model="name"
+        :rules="nameRules"
+        :counter="15"
+        required
+      ></v-text-field>
+      <v-text-field
+        name="surname"
+        label="Surname"
+        v-model="surname"
+        :rules="surnameRules"
+        :counter="40"
+        required
+      ></v-text-field>
+      <v-text-field
+        name="email"
+        label="E-mail"
+        v-model="email"
+        :rules="emailRules"
+        required
+      ></v-text-field>
+      <v-text-field
+        v-model="phone"
+        color="deep-purple"
+        label="Phone number"
+        mask="phone"
+        required
+        value="+7"
+        :rules = "phoneRules"
+      ></v-text-field>
+      <v-select
+         :items="states"
+         v-model="e6"
+         :menu-props="{ maxHeight: '400' }"
+         label="Select"
+         multiple
+         required
+         hint="You can choose several courses, if you want"
+         persistent-hint
+       ></v-select>
+
+
+
+      <v-text-field
+        v-model="promocode"
+        :error-messages="nameErrors"
+        :counter="10"
+        label="Promocode"
+        required
+        @input="$v.name.$touch()"
+        @blur="$v.name.$touch()"
+        ></v-text-field>
+
+
+      <v-btn type="submit" @click="submit" :class="{ blue: !valid, green: valid }">Register</v-btn>
+      <v-btn @click="clear">clear</v-btn>
+    </v-form>
+
+</v-container>
+
+
+
+
+
+
+
+
+
+
+<v-footer
+    dark
+    height="auto"
+  >
+    <v-card
+      class="flex"
+      flat
+      tile
+      style="background-color: #fff;"
+    >
+      <v-card-title class="justify-center align-center" style="background-color: #28364A;">
+        <strong class="subheading">Get connected with us on social networks!</strong>
+
+        <v-spacer></v-spacer>
+
+
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook-f" style="color: #fff; font-size: 30px;"></i></a>
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram" style="color: #fff; font-size: 30px; margin-left: 50px;"></i></a>
+          <a href="https://whatsapp.com/"><i class="fab fa-whatsapp" style="color: #fff; font-size: 30px; margin-left: 50px;"></i></a>
+          <a href="https://tlgrm.com/"><i class="fab fa-telegram" style="color: #fff; font-size: 30px; margin-left: 50px; margin-right: 50px;"></i></a>
+
+      </v-card-title>
+
+      <v-card-actions class="black lighten-2 justify-center">
+        &copy;2018 — <strong>MIT Courses</strong>
+      </v-card-actions>
+    </v-card>
+  </v-footer>
+
+
+
+
+
+
+      </template>
+    </v-app>
+  </div>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
+  <script>
+
+  new Vue({
+  el: '#app',
+  data () {
+      return {
+        valid: false,
+        name: '',
+        nameRules: [
+          (v) => !!v || 'Name is required',
+          (v) => v && v.length <= 15 || 'Name must be less than 15 characters'
+        ],
+        email: '',
+        emailRules: [
+          (v) => !!v || 'E-mail is required',
+          (v) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail must be valid'
+        ],
+          surname: '',
+          surnameRules: [
+            v => !!v || 'Surname is required',
+            (v) => v && v.length <= 40 || 'Surname must be less than 40 characters'
+          ],
+          phoneRules: [
+            (v) => !!v || 'Phone is required'
+          ],
+          e6: [],
+        e7: [],
+        states: [
+
+          'WEB','Machine Learning','Marketing'
+        ],
+
+
+      }
+    },
+    methods: {
+      submit () {
+        this.$refs.form.validate()
+      },
+      clear () {
+        this.$refs.form.reset()
+        this.select = null
+      }
+    }
+})
+
+
+
+</script>
+</body>
+
+
+
+
+</html>

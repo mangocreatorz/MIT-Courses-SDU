@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="/assets/master.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' rel="stylesheet">
+ <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+  <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+  <div id="app">
+    <v-app light>
+      <template>
+
+
+        <!--header-->
+        <v-toolbar color="blue darken-2">
+
+          <a href="/" style="text-decoration:none"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MIT_logo.svg/1280px-MIT_logo.svg.png" alt="MIT logo" height="30"></a>
+          <a href="/"><h1 style="color: #fff; font-weight: 400; font-size: 30px; margin-left: 10px;">Courses</h1></a>
+          <v-spacer></v-spacer>
+          <v-toolbar-items class="hidden-sm-and-down">
+            <v-btn href="/" flat style="color: #fff;" id="test" >MAIN</v-btn>
+            <v-btn href="/" flat style="color: #fff;" >COURSES</v-btn>
+            <v-btn href="/teachers" style="color: #fff;" flat >TEACHERS</v-btn>
+
+          </v-toolbar-items>
+        </v-toolbar>
+
+
+
+
+        <v-jumbotron
+        src="https://lh3.googleusercontent.com/-oesnyGiIHw8/VU6dINrHNQI/AAAAAAAAbiM/oKnneuEo4KU/w2048-h1820/fon116%2B2160x1920.png">
+    <v-container fill-height>
+      <v-layout align-center>
+        <v-flex>
+          <h3 class="display-3" style="color: #fff; font-weight: 600;">Teachers roster</h3>
+
+          <span class="subheading" style="color: #fff;">Lorem ipsum dolor sit amet, pri veniam forensibus id. Vis maluisset molestiae id, ad semper lobortis cum. At impetus detraxit incorrupte usu, repudiare assueverit ex eum, ne nam essent vocent admodum.</span>
+
+          <v-divider class="my-3" style="color: #fff;"></v-divider>
+
+          <div class="title mb-3" style="color: #fff;">Check out our newest features!</div>
+
+
+
+
+
+
+        </v-flex>
+      </v-layout>
+    </v-container>
+  </v-jumbotron>
+
+
+
+
+
+
+
+        <!--end of header-->
+
+
+        <!--courses line-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <v-flex xs12>
+          <v-container grid-list-xl>
+            <v-layout row wrap align-center>
+              <v-flex xs12 md4>
+                <!--course1-->
+                <v-card>
+                  <v-img
+                  src="https://media.licdn.com/dms/image/C4E03AQFVwfPewJbukg/profile-displayphoto-shrink_800_800/0?e=1548892800&v=beta&t=l_8N0mT3OWPBCR640XV1J7SdybzG16twlRsKyyRVoQ4"
+                  height="500px"
+                  >
+                </v-img>
+
+                <v-card-title primary-title>
+                  <div>
+                    <div class="headline">Carolyn Holz</div>
+                      <span class="grey--text">MIT University,Cambridge,MA B.S. Electrical and Computer Science,2019</span>
+                  </div>
+                </v-card-title>
+
+                <!--TESTING-->
+                <div class="text-xs-center">
+                    <v-dialog
+                      v-model="dialog1"
+                      width="500"
+                    >
+                      <v-btn
+                        slot="activator"
+                        color="red lighten-2"
+                        dark
+                      >
+                        More info
+                      </v-btn>
+
+      <v-card>
+        <v-card-title
+          class="headline grey lighten-2"
+          primary-title
+        >
+          About
+        </v-card-title>
+
+        <v-card-text>
+          <b>Leadership and business</b>
+<ul>
+<li>AXO Women`s Fraternity</li>
+<li>Team Management</li>
+<li>Mit Women`s Rugby Football Club</li>
+</ul>
+<br>
+<b>Programming languages</b>
+<ul>
+<li>Python</li>
+<li>JavaScript</li>
+<li>MATLAB</li>
+<li>C</li>
+<li>C++</li>
+</ul>
+<br>
+<b>Experiences</b>
+<ul>
+<li>MIT StartLabs Executive Board</li>
+<li>Jana Mobile</li>
+</ul>
+        </v-card-text>
+
+        <v-divider></v-divider>
+
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn
+            color="primary"
+            flat
+            @click="dialog1 = false"
+          >
+            Close
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+  </div>
+
+
+
+
+        </v-card-actions>
+
+
+        </v-card>
+        </v-flex>
+
+
+
+        <v-flex xs12 md4>
+          <!--course1-->
+          <v-card>
+            <v-img
+            src="https://pbs.twimg.com/profile_images/959888951665414151/xUAG2JaE_400x400.jpg"
+            height="500px"
+            >
+          </v-img>
+
+          <v-card-title primary-title>
+            <div>
+              <div class="headline">Anthony Cheng</div>
+        <span class="grey--text">MIT University B.S. Material Science and Engineering,2020</span>
+        <span></span>
+            </div>
+          </v-card-title>
+
+          <!--TESTING-->
+          <div class="text-xs-center">
+              <v-dialog
+                v-model="dialog2"
+                width="500"
+              >
+                <v-btn
+                  slot="activator"
+                  color="red lighten-2"
+                  dark
+                >
+                  More info
+                </v-btn>
+
+<v-card>
+  <v-card-title
+    class="headline grey lighten-2"
+    primary-title
+  >
+    About
+  </v-card-title>
+
+  <v-card-text>
+    <b>Leadership and business</b>
+<ul>
+<li>Project Management and Delegation</li>
+<li>Team Management</li>
+<li>Marketing and customer Analysis</li>
+<li>Pubic Speaking</li>
+<li>Negotiation</li>
+</ul>
+<br>
+<b>Problem Solving</b>
+<ul>
+<li>Data Analysis</li>
+<li>Strategy Evalutaion</li>
+<li>Project Design</li>
+</ul>
+<br>
+<b>Programming languages</b>
+<ul>
+<li>Python</li>
+<li>Excel VBA</li>
+<li>MATLAB</li>
+<li>R</li>
+<li>Java</li>
+<li>HTML</li>
+</ul>
+<br>
+<b>Experiences</b>
+<ul>
+<li>MIT StartLabs Executive Board</li>
+</ul>
+  </v-card-text>
+
+  <v-divider></v-divider>
+
+  <v-card-actions>
+    <v-spacer></v-spacer>
+    <v-btn
+      color="primary"
+      flat
+      @click="dialog2 = false"
+    >
+      Close
+    </v-btn>
+  </v-card-actions>
+</v-card>
+</v-dialog>
+</div>
+
+
+
+
+  </v-card-actions>
+
+
+  </v-card>
+  </v-flex>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <v-flex xs12 md4>
+    <!--course1-->
+    <v-card>
+      <v-img
+      src="https://superurop.mit.edu/wp-content/uploads/2018/08/Manlaibaatar_Tugsbayasgalan-72-ppi.jpg"
+      height="500px"
+      >
+    </v-img>
+
+    <v-card-title primary-title>
+      <div>
+        <div class="headline">Tugsbayasgalan Manlaibaatar</div>
+        <span class="grey--text">MIT University B.S. Computer Science, 2019</span>
+      </div>
+    </v-card-title>
+
+    <!--TESTING-->
+    <div class="text-xs-center">
+        <v-dialog
+          v-model="dialog3"
+          width="500"
+        >
+          <v-btn
+            slot="activator"
+            color="red lighten-2"
+            dark
+          >
+            More info
+          </v-btn>
+
+  <v-card>
+  <v-card-title
+  class="headline grey lighten-2"
+  primary-title
+  >
+  About
+  </v-card-title>
+
+  <v-card-text>
+    <b>Achievments</b>
+<ul>
+<li>Hack MIT 2016</li>
+<li>International Physics Olympiad 2014</li>
+<li>Asian Physics Olympiad 2015</li>
+</ul>
+<br>
+<b>Problem Solving</b>
+<ul>
+<li>Data Analysis</li>
+<li>Strategy Evalutaion</li>
+<li>Project Design</li>
+</ul>
+<br>
+<b>Programming languages</b>
+<ul>
+<li>Python</li>
+<li>C</li>
+<li>Java</li>
+<li>JavaScript</li>
+<li>Node</li>
+<li>Express</li>
+<li>Mongo DB</li>
+<li>SQL</li>
+<li>React</li>
+</ul>
+<br>
+<b>Experiences</b>
+<ul>
+<li>Broadway Technology</li>
+<li>MIT Department of EECS</li>
+<li>Base Operations</li>
+<li>JoMI</li>
+<li>NUS Create</li>
+</ul>
+  </v-card-text>
+
+  <v-divider></v-divider>
+
+  <v-card-actions>
+  <v-spacer></v-spacer>
+  <v-btn
+  color="primary"
+  flat
+  @click="dialog3 = false"
+  >
+  Close
+  </v-btn>
+  </v-card-actions>
+  </v-card>
+  </v-dialog>
+  </div>
+
+
+
+
+  </v-card-actions>
+
+
+  </v-card>
+  </v-flex>
+
+
+        </v-layout>
+        </v-container>
+        </v-flex>
+        </v-layout>
+
+
+
+
+
+
+
+
+
+<v-footer
+    dark
+    height="auto"
+  >
+    <v-card
+      class="flex"
+      flat
+      tile
+      style="background-color: #fff;"
+    >
+    <v-card-title class="blue justify-center align-center">
+      <strong class="subheading">Get connected with us on social networks!</strong>
+
+        <v-spacer></v-spacer>
+
+
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f" style="color: #fff; font-size: 30px;"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram" style="color: #fff; font-size: 30px; margin-left: 50px;"></i></a>
+        <a href="https://whatsapp.com/"><i class="fab fa-whatsapp" style="color: #fff; font-size: 30px; margin-left: 50px;"></i></a>
+        <a href="https://tlgrm.com/"><i class="fab fa-telegram" style="color: #fff; font-size: 30px; margin-left: 50px; margin-right: 50px;"></i></a>
+      </v-card-title>
+
+      <v-card-actions class="blue lighten-2 justify-center">
+        &copy;2018 — <strong>MIT Courses</strong>
+      </v-card-actions>
+    </v-card>
+  </v-footer>
+
+
+
+
+
+
+
+      </template>
+    </v-app>
+  </div>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
+  <script>
+
+  new Vue({ el: '#app',
+  data: () => ({
+    dialog1: false,
+    dialog2: false,
+    dialog3: false,
+      })
+    })
+
+
+</script>
+</body>
+
+
+
+
+</html>
